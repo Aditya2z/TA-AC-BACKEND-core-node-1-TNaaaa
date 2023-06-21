@@ -2,7 +2,7 @@ console.log("Welcome to Nodejs");
 
 var os = require("os");
 
-console.log(os.cpus(), os.freemem(), os.uptime(), os.version());
+console.log(os.cpus().length, os.freemem(), os.uptime(), os.version());
 
 // const { readFile, unlink } = require('fs');
 const { readFile, unlink } = require("./customfs");
