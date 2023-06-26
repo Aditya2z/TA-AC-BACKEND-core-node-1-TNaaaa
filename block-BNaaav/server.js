@@ -37,5 +37,8 @@ function handleRequest(req, res) {
   } else if (requestMethod === "GET" && pathname === "/blog.html" || requestMethod === "GET" && pathname === "/blog") {
     res.writeHead(202, { "Content-Type": "text/html" });
     fs.createReadStream("./blog.html").pipe(res);
+  } else {
+    res.statusCode = 404;
+    res.end("Page not found!")
   }
 }
